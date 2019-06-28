@@ -5,11 +5,11 @@
 </head>
 <body>
 	<center>
-		<table>
+		<table border="3">
 			<thead>
 				<tr>
-					<th> <a href="formulario.php">Nuevo<a/></th>
-					<th>Lista de Ediciones</th>
+					<th colspan="1"> <a href="formulario.php">Nuevo<a/></th>
+					<th colspan="7">Lista de Ediciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -27,18 +27,25 @@
 				include("conexion.php");
 				$query= "SELECT * FROM Edicion";
 				$resultado= pg_query($conexion,$query);
-				while($row=$resultado-> fetch_assoc()){
-
-
-				}
+				while($row = pg_fetch_assoc($resultado)){
 			?>
+
 				<tr>
 					<td><?php echo $row['isbn']?>;</td>
-					<td><?php echo $row['codigo titulo']?>;</td>
-					<td><?php echo $row['numero paginas']?>;</td>
+					<td><?php echo $row['codigotitulo']?>;</td>
+					<td><?php echo $row['numpaginas']?>;</td>
 					<td><?php echo $row['tamaño']?>;</td>
-					<td><?php echo $row['ref editorial']?>;</td>
+					<td><?php echo $row['refedit']?>;</td>
+					<td><a href="#">modificar<a/></td>
+					<td><a href="#">eliminar<a/></td>
 				</tr>
+
+			<?php 
+				}
+			 ?>
+				
+			
+				
 
 			</tbody>
 		</table>
