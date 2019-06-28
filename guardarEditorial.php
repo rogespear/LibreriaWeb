@@ -12,7 +12,7 @@ include("conexion.php");
 
     $resultado_insertSQL = pg_query($conexion,$insertSQL);
 
-	if($resultado){
+	if($resultado_insertSQL){
 		echo "insercion exitosa";
 	}
 	else{
