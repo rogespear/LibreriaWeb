@@ -36,8 +36,8 @@
 					<td><?php echo $row['numpaginas']?>;</td>
 					<td><?php echo $row['tamaño']?>;</td>
 					<td><?php echo $row['refedit']?>;</td>
-					<td><a href="#">modificar<a/></td>
-					<td><a href="#">eliminar<a/></td>
+					<td><a href="modificarEdicion.php?isbn=<?php echo $row['isbn']; ?>">modificar<a/></td>
+					<td><a href="eliminarEdicion.php?isbn=<?php echo $row['isbn']; ?>">eliminar<a/></td>
 				</tr>
 
 			<?php 
