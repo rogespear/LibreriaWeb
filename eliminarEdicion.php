@@ -7,7 +7,7 @@ include("conexion.php");
     $result_deleteSQL2 = pg_query($conexion,$deleteSQL2);
 
     if($result_deleteSQL2){
-		header("location: tabla.php");
+		header("location: tablaEdicion.php");
 	}
 	else{
 		echo "eliminacion no exitosa";

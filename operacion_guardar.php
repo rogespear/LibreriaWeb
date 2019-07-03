@@ -14,7 +14,7 @@ include("conexion.php");
 	$resultado= pg_query($conexion,$query);
 
 	if($resultado){
-		header("Location: tabla.php");
+		header("Location: tablaEdicion.php");
 	}
 	else{
 		echo "insecion no exitosa";
