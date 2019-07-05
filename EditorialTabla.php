@@ -14,6 +14,7 @@
 			</thead>
 			<tbody>
 				<tr>
+				<td>prueba</td>
 				<td>codigo</td>
 				<td>nombre</td>
 				<td>telefono</td>
@@ -29,6 +30,7 @@
 				while($row = pg_fetch_assoc($resultado)){
 			?>
 				<tr>
+					<td><a href= "EditorialEdicionesRelacionadas.php?codigo=<?php echo $row['codigo']; ?>">ver Ediciones<a/></td>
 					<td><?php echo $row['codigo']?></td>
 					<td><?php echo $row['nombre']?></td>
 					<td><?php echo $row['telefono']?></td>
