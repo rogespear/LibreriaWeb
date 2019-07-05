@@ -29,14 +29,14 @@
 				$resultado= pg_query($conexion,$query);
 				while($row = pg_fetch_assoc($resultado)){
 			?>
-				<tr>
-					<td><a href= "EditorialEdicionesRelacionadas.php?codigo=<?php echo $row['codigo']; ?>">ver Ediciones<a/></td>
+				<tr>					
 					<td><?php echo $row['codigo']?></td>
 					<td><?php echo $row['nombre']?></td>
 					<td><?php echo $row['telefono']?></td>
 					<td><?php echo $row['direccion']?></td>					
 					<td><a href="EditorialModificar.php?codigo=<?php echo $row['codigo']; ?>">modificar<a/></td>
 					<td><a href="EditorialEliminar.php?codigo=<?php echo $row['codigo']; ?>">eliminar<a/></td>
+					<td><a href= "EditorialEdicionesRelacionadas.php?codigo=<?php echo $row['codigo']; ?>">ver Ediciones<a/></td>
 				</tr>
 
 			<?php 
