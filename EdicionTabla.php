@@ -8,7 +8,7 @@
 		<table border="3">
 			<thead>
 				<tr>
-					<th colspan="1"> <a href="formulario.php">Nuevo<a/></th>
+					<th colspan="1"> <a href="EdicionFormulario.php">Nuevo<a/></th>
 					<th colspan="7">Lista de Ediciones</th>
 				</tr>
 			</thead>
@@ -19,8 +19,7 @@
 				<td>numero paginas</td>
 				<td>tamaño</td>
 				<td>ref editorial</td>
-				<td>modificar</td>
-				<td>eliminar</td>			
+				
 				</tr>
 
 			<?php
@@ -30,13 +29,13 @@
 				while($row = pg_fetch_assoc($resultado)){
 			?>
 				<tr>
-					<td><?php echo $row['isbn']?>;</td>
-					<td><?php echo $row['codigotitulo']?>;</td>
-					<td><?php echo $row['numpaginas']?>;</td>
-					<td><?php echo $row['tamaño']?>;</td>
-					<td><?php echo $row['refedit']?>;</td>
-					<td><a href="modificarEdicion.php?isbn=<?php echo $row['isbn']; ?>">modificar<a/></td>
-					<td><a href="eliminarEdicion.php?isbn=<?php echo $row['isbn']; ?>">eliminar<a/></td>
+					<td><?php echo $row['isbn']?></td>
+					<td><?php echo $row['codigotitulo']?></td>
+					<td><?php echo $row['numpaginas']?></td>
+					<td><?php echo $row['tamaño']?></td>
+					<td><?php echo $row['refedit']?></td>
+					<td><a href="EdicionModificar.php?isbn=<?php echo $row['isbn']; ?>">modificar<a/></td>
+					<td><a href="EdicionEliminar.php?isbn=<?php echo $row['isbn']; ?>">eliminar<a/></td>
 				</tr>
 
 			<?php 

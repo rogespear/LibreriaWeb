@@ -5,14 +5,11 @@ include("conexion.php");
 	$precio= $_POST['precio'];
 	$estado= $_POST['estado'];
 	
-
-
-	$query="UPDATE Edicion SET codigotitulo='$codigotitulo',numpaginas='$numpaginas',tamaño='$tamaño',refedit='$refedit' WHERE isbn='$isbn'";
-
+	$query="UPDATE Ejemplar SET precio='$precio',estado='$estado' WHERE id='$id'";
 	$resultado= pg_query($conexion,$query);
 
 	if($resultado){
-		header("Location: tablaEdicion.php");
+		header("Location: EjemplarTabla.php");
 	}
 	else{
 		echo "insecion no exitosa";
