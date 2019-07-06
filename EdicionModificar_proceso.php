@@ -16,6 +16,6 @@ include("conexion.php");
 		header("Location: EdicionTabla.php");
 	}
 	else{
-		echo "insecion no exitosa";
+		echo "edicion no exitosa";
 	}
  ?>
