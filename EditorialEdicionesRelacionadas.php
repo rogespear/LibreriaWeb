@@ -15,12 +15,13 @@
                     <li><a href="EdicionTabla.php">Ediciones</a></li>
                     <li><a href="EditorialTabla.php">Editoriales</a></li>
                     <li><a href="CompraTabla.php">Compras</a></li>
-                    <li><a href="TituloTabla.php">Titulos</a></li>
+					<li><a href="TituloTabla.php">Titulos</a></li>
+					<li><a href="InfoTabla.php">Informacion de Compras</a></li>
                 </ul>
             </nav>            
         </div>
     </header>
-	<center>
+	<center class = "center">
 		<table border="3">
 			<thead>
 				<tr>					
@@ -58,6 +59,12 @@
 			</tbody>
 		</table>
 	</center>
+	<footer class="footer">
+        <div class="container">
+            <p>Marcelo Mu&ntildeoz</p>
+            <p>Camilo Villalobos</p>
+        </div>
+    </footer>			
 
 </body>
 </html>

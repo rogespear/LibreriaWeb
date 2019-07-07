@@ -23,7 +23,12 @@
         </div>
     </header>
 	<center class="center">
-		<table border="3">			
+		<table border="3">
+			<thead>
+				<tr>					
+					<th colspan="7">Lista de Informacion de Compras</th>
+				</tr>
+			</thead>			
 			<tbody>
 				<tr>				
 				<td>Nombre Cliente</td>
@@ -54,13 +59,16 @@
 			</tbody>
 		</table>
         <div>
-        <nav class= "navigation">
-            <ul>
-                <li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
-                <li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
-                <li><a href="InfoParFormularioEjemplar.php">Buscar por ID Ejemplar</a></li>                   
-            </ul>    
-        </nav>
+			<p>
+				<b>Busqueda por Parametros</b>
+			</p>		
+			<nav class= "navigation">			
+				<ul>
+					<li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
+					<li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
+					<li><a href="InfoParFormularioEjemplar.php">Buscar por ID Ejemplar</a></li>                   
+				</ul>    
+			</nav>
         </div>
 	</center>
     
