@@ -23,46 +23,49 @@
         </div>
     </header>
 	<center class="center">
-		<table border="3">
-			<thead>
-				<tr>
-					<th colspan="1"> <a href="EditorialFormulario.php">Nuevo<a/></th>
-					<th colspan="7">Lista de Editoriales</th>
-				</tr>
-			</thead>
+		<table border="3">			
 			<tbody>
 				<tr>				
-				<td>codigo</td>
-				<td>nombre</td>
-				<td>telefono</td>
-				<td>direccion</td>				
-				<td>modificar</td>
-				<td>eliminar</td>			
+				<td>Nombre Cliente</td>
+				<td>Costo Compra</td>
+				<td>Fecha de Compra</td>
+				<td>Id Ejemplar</td>									
 				</tr>
 
 			<?php
+                
 				include("conexion.php");
-				$query= "SELECT * FROM Editorial";
-				$resultado= pg_query($conexion,$query);
-				while($row = pg_fetch_assoc($resultado)){
+				$fecha = $_POST['fecha'];
+                $consultaSQL7 = "SELECT Cliente.nombre, compra.costo, compra.fecha, ejemplar.id "
+                    . "FROM cliente INNER JOIN compra on cliente.rut = compra.refclient "
+                    . "INNER JOIN ejemplar ON ejemplar.id = compra.refejemp WHERE fecha = '$fecha'";
+                $res_consultaSQL7 = pg_query($conexion,$consultaSQL7);
+				while($row = pg_fetch_assoc($res_consultaSQL7)){
 			?>
 				<tr>					
-					<td><?php echo $row['codigo']?></td>
 					<td><?php echo $row['nombre']?></td>
-					<td><?php echo $row['telefono']?></td>
-					<td><?php echo $row['direccion']?></td>					
-					<td><a href="EditorialModificar.php?codigo=<?php echo $row['codigo']; ?>">modificar<a/></td>
-					<td><a href="EditorialEliminar.php?codigo=<?php echo $row['codigo']; ?>">eliminar<a/></td>
-					<td><a href= "EditorialEdicionesRelacionadas.php?codigo=<?php echo $row['codigo']; ?>">ver Ediciones<a/></td>
+					<td><?php echo $row['costo']?></td>
+					<td><?php echo $row['fecha']?></td>
+					<td><?php echo $row['id']?></td>										
 				</tr>
-
+                
 			<?php 
 				}
 			 ?>
 
 			</tbody>
 		</table>
+        <div>
+        <nav class= "navigation">
+            <ul>
+                <li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
+                <li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
+                <li><a href="InfoParFormularioEjemplar.php">Buscar por ID Ejemplar</a></li>                   
+            </ul>    
+        </nav>
+        </div>
 	</center>
+    
 	<footer class="footer">
         <div class="container">
             <p>Marcelo Mu&ntildeoz</p>

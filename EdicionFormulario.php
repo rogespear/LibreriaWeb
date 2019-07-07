@@ -16,6 +16,7 @@
                     <li><a href="EditorialTabla.php">Editoriales</a></li>
                     <li><a href="CompraTabla.php">Compras</a></li>
                     <li><a href="TituloTabla.php">Titulos</a></li>
+					<li><a href="InfoTabla.php">Informacion de Compras</a></li>
                 </ul>
             </nav>            
         </div>

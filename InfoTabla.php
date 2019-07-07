@@ -23,48 +23,52 @@
         </div>
     </header>
 	<center class="center">
-		<table border="3">
-			<thead>
-				<tr>
-					<th colspan="1"> <a href="EjemplarFormulario.php">Nuevo<a/></th>
-					<th colspan="7">Lista de Ediciones</th>
-				</tr>
-			</thead>
+		<table border="3">			
 			<tbody>
-				<tr>
-				<td>ID</td>
-				<td>Precio</td>
-				<td>Estado</td>				
-				
+				<tr>				
+				<td>Nombre Cliente</td>
+				<td>Costo Compra</td>
+				<td>Fecha de Compra</td>
+				<td>Id Ejemplar</td>									
 				</tr>
 
 			<?php
 				include("conexion.php");
-				$query= "SELECT * FROM ejemplar";
-				$resultado= pg_query($conexion,$query);
-				while($row = pg_fetch_assoc($resultado)){
+				$consultaSQL6 = "SELECT Cliente.nombre, compra.costo, compra.fecha, ejemplar.id"
+                . " FROM cliente INNER JOIN compra ON cliente.rut = compra.refclient "
+                . "INNER JOIN ejemplar ON ejemplar.id = compra.refejemp";
+                $res_consultaSQL6 = pg_query($conexion,$consultaSQL6);
+				while($row = pg_fetch_assoc($res_consultaSQL6)){
 			?>
-
-				<tr>
-					<td><?php echo $row['id']?></td>
-					<td><?php echo $row['precio']?></td>
-					<td><?php echo $row['estado']?></td>					
-					<td><a href="EjemplarModificar.php?id=<?php echo $row['id']; ?>">modificar<a/></td>
-					<td><a href="EjemplarEliminar.php?id=<?php echo $row['id']; ?>">eliminar<a/></td>
+				<tr>					
+					<td><?php echo $row['nombre']?></td>
+					<td><?php echo $row['costo']?></td>
+					<td><?php echo $row['fecha']?></td>
+					<td><?php echo $row['id']?></td>										
 				</tr>
-
+                
 			<?php 
 				}
 			 ?>
-											
+
 			</tbody>
 		</table>
+        <div>
+        <nav class= "navigation">
+            <ul>
+                <li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
+                <li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
+                <li><a href="InfoParFormularioEjemplar.php">Buscar por ID Ejemplar</a></li>                   
+            </ul>    
+        </nav>
+        </div>
 	</center>
+    
 	<footer class="footer">
         <div class="container">
             <p>Marcelo Mu&ntildeoz</p>
             <p>Camilo Villalobos</p>
         </div>
-    </footer>
+    </footer>			
 </body>
 </html>
