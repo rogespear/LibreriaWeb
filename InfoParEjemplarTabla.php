@@ -56,13 +56,16 @@
 			</tbody>
 		</table>
         <div>
-        <nav class= "navigation">
-            <ul>
-                <li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
-                <li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
-                <li><a href="InfoParFormularioCliente.php">Buscar por ID Ejemplar</a></li>                   
-            </ul>    
-        </nav>
+			<p>
+				<b>Busqueda por Parametros</b>
+			</p>		
+			<nav class= "navigation">
+				<ul>
+					<li><a href="InfoParFormularioCliente.php">Buscar por Cliente</a></li>
+					<li><a href="InfoParFormularioCompra.php">Buscar por Fecha de Compra</a></li>
+					<li><a href="InfoParFormularioCliente.php">Buscar por ID Ejemplar</a></li>                   
+				</ul>    
+			</nav>
         </div>
 	</center>
     

@@ -8,7 +8,7 @@ include("conexion.php");
 	$telefono= $_POST['telefono'];
 
 
-	$query="UPDATE Edicion SET nombre='$nombre',apellido='$apellido',direccion='$direccion',telefono='$telefono' WHERE rut='$rut'";
+	$query="UPDATE cliente SET nombre='$nombre',apellido='$apellido',direccion='$direccion',telefono='$telefono' WHERE rut='$rut'";
 
 	$resultado= pg_query($conexion,$query);
 

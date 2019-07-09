@@ -25,16 +25,16 @@
 		<table border="3">
 			<thead>
 				<tr>					
-					<th colspan="7">Lista de Ediciones</th>
+					<th colspan="7">Lista de Ediciones de una Editorial</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-				<td>isbn</td>
-				<td>codigo titulo</td>
-				<td>numero paginas</td>
-				<td>tamaño</td>
-				<td>ref editorial</td>				
+				<td>ISBN</td>
+				<td>Codigo de Titulo</td>
+				<td>Nro de paginas</td>
+				<td>Dimensiones</td>
+				<td>Codigo de editorial</td>				
 				</tr>
 
 			<?php
