@@ -52,8 +52,8 @@
 					<td><?php echo $row['fecha']?></td>
 					<td><?php echo $row['costo']?></td>
 					
-					<td><a href="EdicionModificar.php?refejemp=<?php echo $row['refejemp']; ?>">modificar<a/></td>
-					<td><a href="EdicionEliminar.php?refejemp=<?php echo $row['refejemp']; ?>">eliminar<a/></td>
+					<td><a href="CompraModificar.php?refejemp=<?php echo $row['refejemp']; ?>">modificar<a/></td>
+					<td><a href="CompraEliminar.php?refejemp=<?php echo $row['refejemp']; ?>">eliminar<a/></td>
 				</tr>
 
 			<?php 

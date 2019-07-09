@@ -6,9 +6,7 @@ include("conexion.php");
 	$fecha= $_POST['fecha'];
 	$costo= $_POST['costo'];
 
-
-
-	$query="UPDATE Edicion SET refclient='$refclient',fecha='$fecha',costo='$costo' WHERE refejemp='$refejemp'";
+	$query="UPDATE Compra SET refclient='$refclient',fecha='$fecha',costo='$costo' WHERE refejemp='$refejemp'";
 
 	$resultado= pg_query($conexion,$query);
 
